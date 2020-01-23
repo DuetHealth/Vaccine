@@ -17,7 +17,7 @@ public extension CollectionViewLayout {
     #endif
   }
 
-  @objc public convenience init(vaccine_swizzled: Bool) {
+  @objc convenience init(vaccine_swizzled: Bool) {
     self.init(vaccine_swizzled: true)
     Injection.add(observer: self, with: #selector(vaccine_layout_injected(_:)))
   }

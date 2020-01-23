@@ -9,7 +9,7 @@ public extension UIApplicationDelegate {
   ///   - oldWindow: Optional previous window.
   ///   - window: The new window that should become both key and visible.
   ///   - handler: A completion closure that takes the new window as its argument.
-  public func transition(from oldWindow: UIWindow?, to window: UIWindow, then handler: @escaping (UIWindow) -> Void) {
+  func transition(from oldWindow: UIWindow?, to window: UIWindow, then handler: @escaping (UIWindow) -> Void) {
     guard let oldWindow = oldWindow else {
       window.makeKeyAndVisible()
       handler(window)
