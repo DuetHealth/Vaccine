@@ -5,12 +5,8 @@ import PackageDescription
 
 let package = Package(
     name: "Vaccine",
-    platforms: [
-        .macOS(.v10_11), .iOS(.v9), .tvOS(.v11)
-    ],
-    products: [
-        .library(name: "Vaccine", targets: ["Vaccine-iOS"]),
-    ],
+    platforms: [.macOS(.v10_11), .iOS(.v9), .tvOS(.v11)],
+    products: [.library(name: "Vaccine", targets: ["Vaccine-iOS"])],
     targets: [
         .target(name: "Vaccine-iOS",
                 exclude: ["Sources/macOS"]),
